@@ -1,6 +1,6 @@
 const botconfig = require("./botconfig.json");
 //If you want to self host
-const tokenfile = require("./tokenfile.json");
+//const tokenfile = require("./tokenfile.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
@@ -119,4 +119,4 @@ if(cmd === ".owner") {
 //bot.login(tokenfile.token);
 
 //Heroku 24/7 Hosting
-bot.login(tokenfile.token);
+bot.login(process.env.TOKEN);
